@@ -17,6 +17,7 @@ RUN sed -i 's/#PermitRootLogin yes/PermitRootLogin yes/' /etc/ssh/sshd_config
 #RUN chown -R sshuser:sshuser /home/sshuser/.ssh
 #RUN chmod 600 /home/sshuser/.ssh/authorized_keys
 #RUN sed -i 's/#PubkeyAuthentication yes/PubkeyAuthentication yes/' /etc/ssh/sshd_config
+#RUN sed -i 's/#PasswordAuthentication yes/PasswordAuthentication no/' /etc/ssh/sshd_config
 # limiting max auth to slow down brute force
 #RUN sed -i 's/#MaxAuthTries 6/MaxAuthTries 3/' /etc/ssh/sshd_config
 # making plugable auth modules working and ssh
