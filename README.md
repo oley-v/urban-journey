@@ -3,11 +3,21 @@ SSHD Configuration Hands-on Demo
 An Ubuntu/deb based container with OpenSSH daemon to quickly experiment with sshd_config (aka sshd.conf) in a relatively safe Docker environment. 
 __WARNING:__ The container is not hardened and clear text passwords are in the Dockerfile do not expose it to public networks.
 
-__TODO:__ A make file with ssh-keygen and docker commands 
+__TODO:__ Expand make functionality by specifying what you want to have
 
 How To
 ------
-Change the config via Dockerfile, re-build, and run. You can practice Docker skills, sed, and sshd_config. 
+Change the config via Dockerfile, re-build, and run. You can practice Docker skills, sed, and sshd_config.
+
+__Using GNU make__
+You will need make to do the following
+```
+make help     This help.
+make build    Build the container
+make run      Run container on port configured in `config.env`
+make up       Build and Run container with `config.env` (Alias)
+make stop     Stop and remove a running container
+```
 
 __Example__
 To utilize public key ssh auth generate the key
